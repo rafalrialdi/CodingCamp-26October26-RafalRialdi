@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Meta tags untuk responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi web untuk melacak pengeluaran harian dengan visualisasi chart interaktif">
+  <meta name="theme-color" content="#ffffff">
+  
+  <title>Expense & Budget Visualizer</title>
+  
+  <!-- CSS untuk styling aplikasi -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Kontainer utama aplikasi -->
+  <div id="app" class="app-container">
+    
+    <!-- Header: Total Balance Display -->
+    <header class="header">
+      <div class="total-balance-container">
+        <h1>Total Balance</h1>
+        <div id="totalBalance" class="total-balance-display">
+          Rp 0
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      
+      <!-- Sidebar: Input Form & Transaction List -->
+      <aside class="sidebar">
+        
+        <!-- Input Form Section -->
+        <section class="input-form-section">
+          <h2>Tambah Pengeluaran</h2>
+          <form id="transactionForm" class="input-form" novalidate>
+            
+            <!-- Item Name Input -->
+            <div class="form-group">
+              <label for="itemName">Nama Item</label>
+              <input 
+                type="text" 
+                id="itemName" 
+                name="itemName" 
+                class="form-control"
+                placeholder="Contoh: Makan siang"
+                required
+              >
+            </div>
+
+            <!-- Amount Input -->
+            <div class="form-group">
+              <label for="amount">Jumlah (Rp)</label>
+              <input 
+                type="number" 
+                id="amount" 
+                name="amount" 
+                class="form-control"
+                placeholder="Contoh: 50000"
+                min="1"
+                step="100"
+                required
+              >
+            </div>
+
+            <!-- Category Dropdown -->
+            <div class="form-group">
+              <label for="category">Kategori</label>
+              <select 
+                id="category" 
+                name="category" 
+                class="form-control"
+                required
+              >
+                <option value="">-- Pilih Kategori --</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Transportasi">Transportasi</option>
+                <option value="Hiburan">Hiburan</option>
+              </select>
+            </div>
+
+            <!-- Error Message Container -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">
+              Tambah Transaksi
+            </button>
+          </form>
+        </section>
+
+        <!-- Transaction List Section -->
+        <section class="transaction-list-section">
+          <h2>Daftar Pengeluaran</h2>
+          <div id="transactionList" class="transaction-list">
+            <!-- Transactions akan di-render di sini oleh JavaScript -->
+            <p class="empty-state">Belum ada pengeluaran. Mulai tambahkan sekarang!</p>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- Main: Pie Chart -->
+      <section class="chart-section">
+        <h2>Distribusi Pengeluaran</h2>
+        <div id="chartContainer" class="chart-container">
+          <canvas id="expenseChart" width="400" height="400"></canvas>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Chart.js Library dari CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+  <!-- Aplikasi JavaScript Modules -->
+  <!-- Utils -->
+  <script src="js/utils/validators.js"></script>
+  <script src="js/utils/formatters.js"></script>
+
+  <!-- Managers -->
+  <script src="js/managers/storage-manager.js"></script>
+  <script src="js/managers/data-manager.js"></script>
+
+  <!-- Components -->
+  <script src="js/components/input-form.js"></script>
+  <script src="js/components/transaction-list.js"></script>
+  <script src="js/components/total-balance.js"></script>
+  <script src="js/components/pie-chart.js"></script>
+
+  <!-- Main Application -->
+  <script src="js/app.js"></script>
+</body>
+</html>

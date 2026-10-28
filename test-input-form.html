@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form Component Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border-left: 4px solid #ddd;
+        }
+        .test-result.pass {
+            background-color: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+        .test-result.fail {
+            background-color: #f8d7da;
+            border-left-color: #dc3545;
+            color: #721c24;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        input, select {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            max-width: 300px;
+            display: block;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            display: none;
+            padding: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .success-message {
+            display: none;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input Form Component - Manual Test</h1>
+
+    <!-- Test Setup -->
+    <div class="test-container">
+        <div class="test-title">Test Form Setup</div>
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
+        <form id="transactionForm" class="transaction-form">
+            <div>
+                <label for="itemName">Item Name</label>
+                <input 
+                    type="text" 
+                    id="itemName" 
+                    placeholder="e.g., Lunch at restaurant"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="amount">Amount (Rp)</label>
+                <input 
+                    type="number" 
+                    id="amount" 
+                    placeholder="e.g., 50000"
+                    min="1"
+                    step="1"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="Makanan">Makanan (Food)</option>
+                    <option value="Transportasi">Transportasi (Transportation)</option>
+                    <option value="Hiburan">Hiburan (Entertainment)</option>
+                </select>
+            </div>
+
+            <button type="submit">Add Transaction</button>
+        </form>
+    </div>
+
+    <!-- Test Results -->
+    <div class="test-container">
+        <div class="test-title">Test Results</div>
+        <div id="testResults"></div>
+    </div>
+
+    <!-- Load dependencies -->
+    <script src="js/utils/validators.js"></script>
+    <script src="js/utils/formatters.js"></script>
+    <script src="js/components/input-form.js"></script>
+
+    <script>
+        const testResults = [];
+
+        function addTest(name, passed, message = '') {
+            testResults.push({ name, passed, message });
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `test-result ${passed ? 'pass' : 'fail'}`;
+            resultDiv.textContent = `${passed ? '✓' : '✗'} ${name}${message ? ': ' + message : ''}`;
+            document.getElementById('testResults').appendChild(resultDiv);
+        }
+
+        // Run tests
+        try {
+            // Test 1: Initialization
+            const initSuccess = InputForm.initialize();
+            addTest('Initialize InputForm', initSuccess);
+
+            // Test 2: Get empty values
+            const values = InputForm.getValues();
+            addTest('Get initial empty values', 
+                values.itemName === '' && values.amount === '' && values.category === '');
+
+            // Test 3: Set and get values
+            document.getElementById('itemName').value = 'Lunch';
+            document.getElementById('amount').value = '50000';
+            document.getElementById('category').value = 'Makanan';
+            
+            const filledValues = InputForm.getValues();
+            addTest('Get filled values', 
+                filledValues.itemName === 'Lunch' && 
+                filledValues.amount === '50000' && 
+                filledValues.category === 'Makanan');
+
+            // Test 4: Clear form
+            InputForm.clear();
+            const clearedValues = InputForm.getValues();
+            addTest('Clear form', 
+                clearedValues.itemName === '' && 
+                clearedValues.amount === '' && 
+                clearedValues.category === '');
+
+            // Test 5: Show error
+            InputForm.showError('Test error message');
+            const errorElement = document.getElementById('error-message');
+            addTest('Show error message', 
+                errorElement.textContent === 'Test error message' && 
+                errorElement.style.display === 'block',
+                errorElement.textContent);
+
+            // Test 6: Hide error
+            InputForm.hideError();
+            addTest('Hide error message', 
+                errorElement.textContent === '' && 
+                errorElement.style.display === 'none');
+
+            // Test 7: Validate function exists
+            const hasValidate = typeof InputForm.validate === 'function';
+            addTest('Validate method exists', hasValidate);
+
+            // Test 8: Validate with invalid data
+            document.getElementById('itemName').value = '';
+            document.getElementById('amount').value = '50000';
+            document.getElementById('category').value = 'Makanan';
+            
+            const invalidValidation = InputForm.validate();
+            addTest('Validate rejects empty itemName', 
+                !invalidValidation.valid && invalidValidation.error !== null,
+                invalidValidation.error);
+
+            // Test 9: Validate with valid data
+            document.getElementById('itemName').value = 'Lunch';
+            document.getElementById('amount').value = '50000';
+            document.getElementById('category').value = 'Makanan';
+            
+            const validValidation = InputForm.validate();
+            addTest('Validate accepts valid data', 
+                validValidation.valid && validValidation.error === null);
+
+            // Test 10: OnSubmit callback
+            let callbackCalled = false;
+            let callbackData = null;
+            InputForm.onSubmit((data) => {
+                callbackCalled = true;
+                callbackData = data;
+            });
+            addTest('Register onSubmit callback', true);
+
+            // Test 11: Form submission with valid data
+            document.getElementById('itemName').value = 'Dinner';
+            document.getElementById('amount').value = '75000';
+            document.getElementById('category').value = 'Makanan';
+            
+            const form = document.getElementById('transactionForm');
+            form.dispatchEvent(new Event('submit', { bubbles: true }));
+            
+            addTest('Form submission triggers callback', 
+                callbackCalled && 
+                callbackData.itemName === 'Dinner' &&
+                callbackData.amount === '75000' &&
+                callbackData.category === 'Makanan');
+
+            // Test 12: Form clears after submission
+            const afterSubmitValues = InputForm.getValues();
+            addTest('Form clears after successful submission', 
+                afterSubmitValues.itemName === '' &&
+                afterSubmitValues.amount === '' &&
+                afterSubmitValues.category === '');
+
+            // Test 13: Focus first input
+            InputForm.focusFirstInput();
+            const itemInput = document.getElementById('itemName');
+            addTest('Focus first input works', document.activeElement === itemInput);
+
+            // Test 14: Set disabled
+            InputForm.setDisabled(true);
+            addTest('Set disabled to true', 
+                document.getElementById('itemName').disabled && 
+                document.getElementById('amount').disabled &&
+                document.getElementById('category').disabled);
+
+            // Test 15: Set enabled
+            InputForm.setDisabled(false);
+            addTest('Set disabled to false', 
+                !document.getElementById('itemName').disabled && 
+                !document.getElementById('amount').disabled &&
+                !document.getElementById('category').disabled);
+
+            // Summary
+            const passCount = testResults.filter(t => t.passed).length;
+            const totalCount = testResults.length;
+            console.log(`\n✓ Passed: ${passCount}/${totalCount}`);
+            
+        } catch (error) {
+            addTest('Unexpected error', false, error.message);
+            console.error('Test error:', error);
+        }
+    </script>
+</body>
+</html>

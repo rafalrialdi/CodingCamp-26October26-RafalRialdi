@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expense & Budget Visualizer - Track your daily expenses with ease">
+    <meta name="theme-color" content="#2C3E50">
+    <title>Expense & Budget Visualizer</title>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="container">
+            <h1 class="app-title">Expense Tracker</h1>
+            <p class="app-subtitle">Track your daily expenses with ease</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+        <div class="container">
+            <!-- Total Balance Display -->
+            <section class="total-balance-section">
+                <div class="total-balance">
+                    <h2 class="total-label">Total Balance</h2>
+                    <p class="total-amount" id="totalAmount">Rp 0</p>
+                </div>
+            </section>
+
+            <!-- Input Form Section -->
+            <section class="form-section">
+                <h2 class="section-title">Add Transaction</h2>
+                
+                <!-- Error Message Display -->
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                <div id="success-message" class="success-message" style="display: none;"></div>
+
+                <!-- Input Form -->
+                <form id="transactionForm" class="transaction-form">
+                    <div class="form-group">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input 
+                            type="text" 
+                            id="itemName" 
+                            class="form-input" 
+                            placeholder="e.g., Lunch at restaurant"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount" class="form-label">Amount (Rp)</label>
+                        <input 
+                            type="number" 
+                            id="amount" 
+                            class="form-input" 
+                            placeholder="e.g., 50000"
+                            min="1"
+                            step="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category" class="form-label">Category</label>
+                        <select id="category" class="form-input" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Makanan">Makanan (Food)</option>
+                            <option value="Transportasi">Transportasi (Transportation)</option>
+                            <option value="Hiburan">Hiburan (Entertainment)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Transaction</button>
+                </form>
+            </section>
+
+            <!-- Layout Container for List and Chart -->
+            <div class="layout-container">
+                <!-- Transaction List Section -->
+                <section class="transaction-section">
+                    <h2 class="section-title">Recent Transactions</h2>
+                    
+                    <div class="transaction-list-container">
+                        <ul id="transactionList" class="transaction-list">
+                            <li class="empty-state">No transactions yet. Add your first expense!</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Pie Chart Section -->
+                <section class="chart-section">
+                    <h2 class="section-title">Expense Distribution</h2>
+                    
+                    <div class="chart-container">
+                        <canvas id="expenseChart" class="expense-chart"></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Expense Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="js/utils/validators.js"></script>
+    <script src="js/utils/formatters.js"></script>
+    <script src="js/managers/data-manager.js"></script>
+    <script src="js/managers/storage-manager.js"></script>
+    <script src="js/components/input-form.js"></script>
+    <script src="js/components/transaction-list.js"></script>
+    <script src="js/components/total-balance.js"></script>
+    <script src="js/components/pie-chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

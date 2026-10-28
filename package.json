@@ -1,0 +1,30 @@
+{
+  "name": "expense-budget-visualizer",
+  "version": "1.0.0",
+  "description": "Track daily expenses with visualization and local storage persistence",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "http-server -p 8080 -c-1",
+    "build": "echo 'No build needed for vanilla JS'"
+  },
+  "keywords": [
+    "expense",
+    "budget",
+    "tracker",
+    "visualization",
+    "chart"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fast-check": "^3.13.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.5.2"
+  },
+  "dependencies": {
+    "chart.js": "^3.9.1"
+  }
+}
