@@ -1,0 +1,336 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Buat struktur project dan setup HTML template": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178098381
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178118165
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178696000
+      }
+    ],
+    "1.2 Setup file CSS dengan responsive design baseline": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178100572
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178118347
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178696323
+      }
+    ],
+    "1.3 Setup Chart.js library dan container": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178101899
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178118456
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178696763
+      }
+    ],
+    "2.1 Implementasi Input Form Component": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178102202
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178703965
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178976927
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180079371
+      }
+    ],
+    "2.2 Implementasi Transaction List Component": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178102456
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178704402
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178977188
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180079285
+      }
+    ],
+    "2.3 Implementasi Total Balance Component": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178102714
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178704815
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178977589
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180079541
+      }
+    ],
+    "2.4 Implementasi Pie Chart Component": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178103026
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178705220
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178977771
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180079696
+      }
+    ],
+    "2.5 Implementasi Data Manager": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178103281
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178705617
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178977933
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180079911
+      }
+    ],
+    "2.6 Implementasi Storage Manager": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178103591
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178705992
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180084285
+      }
+    ],
+    "3.1 Implementasi validation functions": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178103849
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178706311
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180084533
+      }
+    ],
+    "3.2 Implementasi formatting functions": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178104086
+      },
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178706635
+      },
+      {
+        "executionId": "12462435-1e80-4c02-b588-1fdedd453df7",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793180084605
+      }
+    ],
+    "5.1 Implementasi error handling dan user notification system": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178104356
+      }
+    ],
+    "6.1 Implementasi unit tests untuk validators dan formatters": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178104651
+      }
+    ],
+    "6.2 Implementasi unit tests untuk data manager dan storage manager": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178104926
+      }
+    ],
+    "6.3 Implementasi property-based tests menggunakan fast-check": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178105176
+      }
+    ],
+    "6.4 Implementasi integration tests untuk end-to-end flows": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178105396
+      }
+    ],
+    "7.1 Implementasi performance optimizations": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178105690
+      }
+    ],
+    "7.2 Test responsive design dan browser compatibility": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178105949
+      }
+    ],
+    "8.1 Final checkpoint - Ensure all tests pass dan app fully functional": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178106208
+      }
+    ],
+    "8.2 Code documentation dan README": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178106476
+      }
+    ],
+    "All form inputs punya associated labels": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178106791
+      }
+    ],
+    "Keyboard navigation working (Tab, Enter, Escape)": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178107046
+      }
+    ],
+    "ARIA attributes set where needed (aria-label, aria-required, aria-live)": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178107300
+      }
+    ],
+    "Color tidak satu-satunya info differentiation (use icons/text)": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178107619
+      }
+    ],
+    "4.1 Implementasi app initialization dan lifecycle": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178107894
+      }
+    ],
+    "4.2 Implementasi form submission dan transaction addition flow": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178108150
+      }
+    ],
+    "4.3 Implementasi transaction deletion flow": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178108472
+      }
+    ],
+    "Touch targets ≥44px untuk mobile": [
+      {
+        "executionId": "39963147-f733-4297-a8f9-e7e952aff2fb",
+        "chatSessionId": "sess_cd6f3e8b-33b1-481c-ad4c-b4b2232182e7",
+        "timestamp": 1793178108773
+      }
+    ]
+  }
+}
